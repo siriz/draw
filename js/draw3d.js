@@ -137,23 +137,23 @@ function init() {
 
 
 
-    composer = new EffectComposer(renderer);
+    // composer = new EffectComposer(renderer);
 
-    renderPass = new RenderPass(scene, camera);
-    composer.addPass(renderPass);
+    // renderPass = new RenderPass(scene, camera);
+    // composer.addPass(renderPass);
 
-    // Bokeh
-    bokehPass = new BokehPass(scene, camera, {
-        focus: 0,
-        aperture: 0.005,
-        maxblur: 0.01,
-        width: canvasWidth * 20,
-        height: canvasHeight * 20
-    });
-    bokehPass.renderToScreen = true;
+    // // Bokeh
+    // bokehPass = new BokehPass(scene, camera, {
+    //     focus: 0,
+    //     aperture: 0.005,
+    //     maxblur: 0.01,
+    //     width: canvasWidth * 20,
+    //     height: canvasHeight * 20
+    // });
+    // bokehPass.renderToScreen = true;
 
 
-    renderer.autoClear = false;
+    // renderer.autoClear = false;
 
     
 
@@ -278,9 +278,9 @@ function animate() {
 
     controls.update();
     stats.update();
-    // renderer.render( scene, camera );
+    renderer.render( scene, camera );
 
-    composer.render(0.1);
+    // composer.render(0.1);
 
 
     // if ( meshGroup && meshGroup.children.length > 0 ) {
